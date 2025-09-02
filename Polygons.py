@@ -1,5 +1,5 @@
 import turtle
-turtle.Screen().bgcolor(green)
+turtle.Screen().bgcolor("green")
 board = turtle()
 #triangle
 board.forward(100)
