@@ -21,4 +21,17 @@ for i in range(rows):
 if j == 2:
  if temp[j] ==  
 
+print("You can now perform the following operations on this phonebook")
 
+
+print("1. Add a new contact")
+
+print("2. Remove an existing contact")
+
+print("3. Delete all contacts")
+
+print("4. Search for a contact")
+
+print("5. Display all contacts")
+
+print("6. Exit phonebook")
