@@ -64,3 +64,57 @@ if temp[j] ==''or temp [j] =='':
 
 
                         print("*******************************************************************")
+
+                        print("\t\t\tSMARTPHONE DIRECTORECTORY", flush=False)
+                        print(".............................................")
+                        print("\tYOU CAN NOW PERFORM THE FOLLOWING OPERATION ON THIS SLAMBOOK\N")
+                        print("1. ADD A NEW CONTACT")
+                        print("6.EXIT PHONEBOOK")
+                        def add_contact(pb):
+
+
+
+
+                           dip = []
+                           for i in range(len(pb[0])):
+                              if i == 0:
+                                 dip.append(str(input("Enter name:" )))
+                                 if i == 1:
+                                  dip.append(str(input("Enter name:" )))
+                                  if i == 2:
+                                      dip.append(str(input("Enter e-mail address:" )))
+                                      if i == 3:
+                                          dip.append(str(input("Enter date of birth (dd/mm/yy):" )))
+                                          if i == 4:
+                                              dip.append(str(input("Enter category(family/friend/work/other):" )))
+                                          dip.append
+
+
+                                          return pb 
+                                      
+                                      def thanks():
+                                         
+
+                                         print("................................................")
+                                         print("thank you for using our slam book")
+                                         print("please visit again")
+                                         print(".................................................")
+                                         sys.exit("Goodbye,have a nice day ahead")
+
+
+                                         print(".................................................")
+                                         print("hello dear friends,welcome to our slam book")
+                                         print("you may now proccreed to explore this slam book and fill your " 
+                                         "detaill about your friend")
+                                         print("..................................................")
+
+
+
+                                         ch = 1
+                                         pb = initial_slambook()
+                                         while ch in (1,2,3,4,5):
+                                          ch = menu()
+                                          if ch == 1:
+                                       pb = add_contact(pb)
+                                 else:
+                                   thanks
