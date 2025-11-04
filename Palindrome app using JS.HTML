@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Palindrome app</h1>
+    <hr>
+    <br>
+</body>
+<script>
+
+    function Palindrome(mystring) {
+
+        var input = mystring.replace("/[^A-ZO-9]/ig,").toLowerCase(); //madam
+        var reversedinput = input.split('').reverse('').join('');
+        if (input == reversedinput) {
+
+            document.write("<div>" + mystring + "this is Palindrome </div>")
+        }
+        
+        else {
+            document.write("<div>" + mystring + "this is not Palindrome </div>")
+        }
+    }
+
+    Palindrome("madam")
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>
