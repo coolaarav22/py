@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Today Calendar</title>
+    <style>
+        /* Basic CSS for the calendar appearance (can be expanded) */
+        .calendar {
+            width: 300px;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            padding: 15px;
+            text-align: center;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .days-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+        }
+        .day {
+            padding: 5px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .day.today {
+            background-color: #007bff;
+            color: white;
+        }
+        .day.other-month {
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="calendar">
+        <div class="header">
+            <button id="prevBtn">&lt;</button>
+            <h2 id="monthYear"></h2>
+            <button id="nextBtn">&gt;</button>
+        </div>
+        <div class="days-grid" id="daysGrid">
+            <!-- Day headers (Sun, Mon, etc.) added by JS or manually -->
+        </div>
+    </div>
+
+    <!-- Link the JavaScript file -->
+    <script src="calendar.js"></script>
+</body>
+</html>
