@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Rolling Dice Game</title>
+<style>
+    body {
+        text-align: center;
+        font-family: Arial, sans-serif;
+        background: #f5f5f5;
+        margin: 0;
+        padding: 40px;
+    }
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 30px;
+    }
+    .dice-container {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        margin-bottom: 40px;
+    }
+    img {
+        width: 120px;
+    }
+    button {
+        padding: 15px 25px;
+        font-size: 1.3rem;
+        cursor: pointer;
+        background: #007bff;
+        color: white;
+        border: none;
+        border-radius: 8px;
+    }
+    button:hover {
+        background: #0056b3;
+    }
+</style>
+</head>
+
+<body>
+
+<h1>🎲 Dice Game</h1>
+
+<div class="dice-container">
+    <div>
+        <p>Player 1</p>
+        <img id="dice1" src="https://raw.githubusercontent.com/Arjun-CodeHub/dice-assets/main/dice1.png">
+    </div>
+    <div>
+        <p>Player 2</p>
+        <img id="dice2" src="https://raw.githubusercontent.com/Arjun-CodeHub/dice-assets/main/dice1.png">
+    </div>
+</div>
+
+<button onclick="rollDice()">Roll Dice</button>
+
+<h2 id="result"></h2>
+
+<script>
+function rollDice() {
+    // Random numbers 1–6
+    let random1 = Math.floor(Math.random() * 6) + 1;
+    let random2 = Math.floor(Math.random() * 6) + 1;
+
+    // Update dice images
+    document.getElementById("dice1").src = 
+        `https://raw.githubusercontent.com/Arjun-CodeHub/dice-assets/main/dice${random1}.png`;
+    document.getElementById("dice2").src = 
+        `https://raw.githubusercontent.com/Arjun-CodeHub/dice-assets/main/dice${random2}.png`;
+
+    // Show result
+    let result = document.getElementById("result");
+    if (random1 > random2) {
+        result.textContent = "Player 1 Wins! 🎉";
+    } else if (random2 > random1) {
+        result.textContent = "Player 2 Wins! 🎉";
+    } else {
+        result.textContent = "It's a Draw! 🤝";
+    }
+}
+</script>
+
+</body>
+</html>
